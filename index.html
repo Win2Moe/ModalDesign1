@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tooltips Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+   
+    <div class="container mt-5">
+        <p>We are Year 9 Purple Marigold students attending at <a href="#" data-bs-toggle="tooltip" data-bs-title="Education Student Network" data-bs-placement="right">EDUSN</a></p>
+        <p>You can register in Here. 
+            <button class="btn btn-primary" type="button" data-bs-toggle="tooltip" data-bs-title="Register to EDUSN" data-bs-custom-class="custom-tooltip">Register</button>
+        </p>
+    </div>
+    <div class="container">
+        <h2>Footer</h2>
+        <div class="row">
+
+            <div class="col-lg-3">
+                Popover Testing
+                <div class="col-lg-3">
+                    <div class="col"> 
+                        <a href="#" class="fa fa-facebook" 
+                        data-bs-toggle="popover" 
+                        data-bs-html="true"
+                        data-bs-custom-class="custom-popover"
+                        data-bs-title="popover titile" 
+                        data-bs-placement="bottom"
+                        data-bs-trigger="focus"
+                        data-bs-content="popover contents with <b><i>html tag</i><br>
+                            <li>list item 1</li>
+                            <li>List item 2</li>
+                            <li>List item 3</li>"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">Social Media Tooltips
+                <div class="row">
+                    <div class="col"> <a href="#" class="fa fa-facebook" data-bs-toggle="tooltip" data-bs-title="Facebook" data-bs-custom-class="custom-facebook"></a></div>
+                    <div class="col"><a href="#" class="fa fa-twitter" data-bs-toggle="tooltip" data-bs-title="twitter" data-bs-custom-class="custom-twitter"></a></div>
+                    <div class="col"><a href="#" class="fa fa-pinterest" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<i>pinterest</i>" data-bs-custom-class="custom-pinterest"></a></div>
+                </div>            
+            </div>
+            <div class="col-lg-6">Modal Information
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Simple Modal</button>
+            </div>
+            <div class="modal fade" tabindex="-1" id="modal1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                           <h5 class="modal-titile">Modal title</h5> 
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          
+                        </div>
+                        <div class="modal-body">
+                            <p>Modal body text goes Here</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-seconday">Close</button>
+                            <button type="button" class="btn btn-primary">Save change</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Sign Up to Continue</button>
+            </div>
+            <div class="col-4">
+                <div class="modal" id="modal2">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header m-head">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="brand_logo.png" alt="brand logo"><br><br>
+                                        <h4 >Discover the World's<br> top Designer & <br>Creative </h4>
+                                        <br>
+                                        <p><small>art by Purple Marigold</small></p>
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="computing_girl.png" alt="computing girl">
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-10 d-grid">
+                                        <button class="btn btn-primary">Sign up with Google</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="col"><a href="#" class="fa fa-twitter" data-bs-toggle="tooltip" data-bs-title="Sign up with twitter" data-bs-custom-class="custom-twitter"></a></div>
+                                    </div>
+                                </div>
+                                <br>
+                                <p class="text-center">or Sign up with email</p>
+                            </div>
+                            <div class="modal-footer">
+                                <small class="text-center">Always a member? <a href="#" data-bs-toggle="tooltip" data-bs-title="Sign in with gmail">Sign In</a></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+        const tooltips=document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        tooltips.forEach(t=>{new bootstrap.Tooltip(t)})
+
+       const popovers=document.querySelectorAll('[data-bs-toggle="popover"]')
+       popovers.forEach(pp=>{new bootstrap.Popover(pp)})
+    </script>
+
+  </body>
+</html>

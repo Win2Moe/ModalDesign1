@@ -1,0 +1,94 @@
+.bg-hero{
+    background-color: blue;
+    color: aliceblue;
+}
+.image-wrapper{
+    
+    height: 320px;
+}
+@media (min-width: 576px) {    
+    .image-wrapper {    
+        clip-path: polygon(39% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+ 
+  .hero2{
+    background-image: url("bg-jum3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    height: 300px;
+  }
+  /* Card Design */
+  .text1{    
+    background-color: darkblue;
+    color: white;
+    clip-path: polygon(0 1%, 100% 0%, 90% 100%, 0% 100%);
+  }
+  
+  .card .ch_pos{
+    position: absolute;
+    right: 15px;top: 15px;  
+    font-size: 0.8rem;       
+}
+.link{
+    background-color: wheat;
+    color: darkblue;
+    text-decoration: none;
+}
+/* Accordion */
+.edit-showdow{
+  box-shadow: none!important;
+}
+.accordion-header button{
+  background-color: #a1b8e4;
+  color: white;
+}
+.accordion-header button:hover{
+  background-color: #110555;
+  color: white;
+  transition: all 0.2s ease-in;
+}
+/* Style of Tooltip*/
+.custom-facebook{
+  --bs-tooltip-bg:#3B5998;
+}
+.custom-twitter{
+  --bs-tooltip-bg:var(--bs-primary);
+}
+.custom-pinterest{
+  --bs-tooltip-bg:red;
+}
+.fa {
+  padding: 10px; font-size: 20px;
+  width: 35px;height: 35px;
+  text-align: center;  text-decoration: none;
+  margin: 5px 2px; border-radius: 50%;
+}
+ 
+.fa-facebook {
+  background: #3B5998;  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;  color: white;
+}
+.fa-pinterest {
+  background: #cb2027;  color: white;
+}
+
+/* Popover custom design */
+.custom-popover{
+  --bs-popover-max-width: 200px;
+  --bs-popover-border-bg: #3B5998;
+  --bs-popover-header-color: #ffffff;
+  --bs-popover-header-color: #3B5998;
+  --bs-popover-body-color: #3B5998;
+
+}
+/* Design for Modal1 */
+.m-head{
+  background-color: #55ACEE;
+}
+
+  
